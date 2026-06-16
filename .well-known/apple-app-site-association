@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "X3T3KRUQU8.com.moriceau.chiche",
+        "paths": ["/chiche/*"]
+      }
+    ]
+  }
+}
