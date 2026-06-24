@@ -9,6 +9,10 @@
       {
         "appID": "X3T3KRUQU8.com.vibecode.picswipecleanyourphotos-ddcca4",
         "paths": ["/picswipe/*"]
+      },
+      {
+        "appID": "X3T3KRUQU8.com.forma.illustration",
+        "paths": ["/forma/*"]
       }
     ]
   }
