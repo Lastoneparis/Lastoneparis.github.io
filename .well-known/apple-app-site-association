@@ -5,6 +5,10 @@
       {
         "appID": "X3T3KRUQU8.com.moriceau.chiche",
         "paths": ["/chiche/*"]
+      },
+      {
+        "appID": "X3T3KRUQU8.com.vibecode.picswipecleanyourphotos-ddcca4",
+        "paths": ["/picswipe/*"]
       }
     ]
   }
