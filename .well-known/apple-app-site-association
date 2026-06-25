@@ -13,6 +13,10 @@
       {
         "appID": "X3T3KRUQU8.com.forma.illustration",
         "paths": ["/forma/*"]
+      },
+      {
+        "appID": "X3T3KRUQU8.com.moriceau.scanlio",
+        "paths": ["/scanlio/event*", "/scanlio/pro*", "/scanlio/offer*"]
       }
     ]
   }
