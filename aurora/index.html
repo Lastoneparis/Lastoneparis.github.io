@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aurora — the alarm clock that plays you a different song every morning</title>
+<meta name="description" content="Choose a theme. Every morning Aurora wakes you with a different track from it, fading up from silence. No account, works offline.">
+<style>
+:root{--paper:#fffaf4;--ink:#22160f;--soft:#7a6455;--line:#e9dccd;--sun:#e8703a;--dawn:#f6c177}
+@media(prefers-color-scheme:dark){:root{--paper:#150f0b;--ink:#f3e7db;--soft:#a08c7c;--line:#31241a}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font:17px/1.7 ui-serif,Georgia,"Times New Roman",serif}
+.hero{padding:96px 22px 72px;text-align:center;
+ background:linear-gradient(180deg,rgba(246,193,119,.30),rgba(232,112,58,.07) 45%,transparent 80%)}
+h1{font-size:clamp(32px,6.4vw,54px);line-height:1.12;letter-spacing:-.015em;max-width:16ch;margin:0 auto}
+.lede{margin:22px auto 0;max-width:40ch;color:var(--soft);font-size:19px}
+main{max-width:40rem;margin:0 auto;padding:0 22px 90px}
+section{padding:54px 0;border-top:1px solid var(--line)}
+h2{font-family:ui-sans-serif,-apple-system,system-ui,sans-serif;font-size:12px;letter-spacing:.2em;
+ text-transform:uppercase;color:var(--sun);margin-bottom:24px;font-weight:600}
+ol.clock{list-style:none;counter-reset:t}
+ol.clock li{position:relative;padding-left:76px;padding-bottom:30px;border-left:1px solid var(--line);margin-left:52px}
+ol.clock li:last-child{border-left-color:transparent;padding-bottom:0}
+ol.clock time{position:absolute;left:-52px;top:0;width:52px;text-align:right;
+ font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;color:var(--soft);font-variant-numeric:tabular-nums}
+ol.clock li::before{content:"";position:absolute;left:-5px;top:8px;width:9px;height:9px;border-radius:50%;
+ background:var(--dawn);border:2px solid var(--paper)}
+ol.clock b{display:block;font-weight:600}
+ol.clock span{color:var(--soft);font-size:16px}
+.themes{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.themes div{background:var(--paper);padding:16px 18px}
+.themes b{font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;letter-spacing:.02em}
+.themes p{color:var(--soft);font-size:15px;margin-top:2px}
+dt{font-weight:600;margin-top:22px}
+dd{color:var(--soft);margin-top:4px}
+footer{border-top:1px solid var(--line);padding:32px 22px 60px;text-align:center;color:var(--soft);
+ font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px}
+a{color:var(--sun)}
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>A different song every morning</h1>
+  <p class="lede">Pick a theme once. Aurora chooses the track, fades it up from silence, and never plays you the same morning twice.</p>
+</div>
+<main>
+
+<section>
+  <h2>How a morning goes</h2>
+  <ol class="clock">
+    <li><time>06:58</time><b>Silence</b><span>Nothing is playing. Aurora has already chosen the track for this morning and has it ready on the device.</span></li>
+    <li><time>07:00</time><b>The fade begins</b><span>The track starts far below a normal alarm and rises over about thirty seconds, so waking is a gradient rather than a shock.</span></li>
+    <li><time>07:00+</time><b>Full volume</b><span>If you have not moved, it reaches alarm volume. This is still an alarm clock: it is designed to win.</span></li>
+    <li><time>after</time><b>Snooze or stop</b><span>Snooze returns to the same track where it left off. Stop retires the track so tomorrow is a different one.</span></li>
+  </ol>
+</section>
+
+<section>
+  <h2>The themes</h2>
+  <div class="themes">
+    <div><b>Energy</b><p>Bright, up-tempo. For mornings you have to move quickly.</p></div>
+    <div><b>Zen</b><p>Slow, spacious, uncluttered. The gentlest way out of sleep.</p></div>
+    <div><b>Epic</b><p>Cinematic and building. A morning that sounds like it matters.</p></div>
+    <div><b>Lo-Fi</b><p>Warm, dusty, unhurried. Weekend mornings.</p></div>
+    <div><b>Nature</b><p>Water, wind, birdsong. Waking without music at all.</p></div>
+    <div><b>Piano</b><p>Delicate keys at dawn. Quiet without being sleepy.</p></div>
+  </div>
+  <p style="margin-top:16px;color:var(--soft);font-size:16px">Two themes are free. Premium opens all six, removes the one-alarm limit, and adds Apple&nbsp;Music wake-ups.</p>
+</section>
+
+<section>
+  <h2>Will it actually wake me?</h2>
+  <p>This is the only question that matters about an alarm clock, so here is the honest answer. Aurora schedules a real system alarm, plays through the silent switch, and keeps sounding until you stop it. It does not depend on a network: the audio is on the device before the alarm rings, so a plane, a tunnel or a dead Wi-Fi router changes nothing.</p>
+  <p style="margin-top:14px">What it cannot do is override a phone that is powered off, or a Focus mode you have configured to silence it. On first launch Aurora asks for notification permission and explains why; if you decline, the in-app alarm still rings while the app is open, but you should grant it.</p>
+</section>
+
+<section>
+  <h2>Questions</h2>
+  <dl>
+    <dt>Can I use my own music?</dt>
+    <dd>Yes, with Premium: connect an Apple&nbsp;Music playlist and Aurora shuffles it into the alarm. It needs an active Apple&nbsp;Music subscription. If the app is closed when the alarm fires, it rings with your theme sound first and the playlist starts when you open it &mdash; so the alarm never depends on a streaming connection.</dd>
+    <dt>Does it need an account?</dt>
+    <dd>No. There is no sign-in, no profile and no server. Your alarms live on your device.</dd>
+    <dt>Is there a widget?</dt>
+    <dd>Yes &mdash; Home Screen and Lock Screen widgets show the next alarm and the theme it will use.</dd>
+    <dt>Does snooze pick a new song?</dt>
+    <dd>No. Snooze continues the same morning. A new track is chosen once per alarm, not once per ring.</dd>
+  </dl>
+</section>
+
+</main>
+<footer>
+  <a href="support.html">Support</a> &middot; <a href="privacy/">Privacy</a> &middot;
+  <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">EULA</a><br><br>
+  &copy; 2026 Oshi Lab
+</footer>
+</body>
+</html>
