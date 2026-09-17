@@ -3,79 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Oshi Lab — independent apps for iPhone, iPad and Mac</title>
-<meta name="description" content="A small independent studio. Every app runs on your device, without an account, without analytics, and without selling anything about you.">
+<title>Hugo Moriceau</title>
+<meta name="description" content="Personal page of Hugo Moriceau, an independent software developer based in France.">
+<meta name="robots" content="noindex">
 <style>
-:root{--bg:#fcfcfd;--ink:#15181d;--dim:#5e6672;--rule:#e5e7eb;--card:#fff;--accent:#1f5fd8}
-@media(prefers-color-scheme:dark){:root{--bg:#0b0d11;--ink:#e9ecf1;--dim:#98a1af;--rule:#212630;--card:#12151b;--accent:#7ba7ff}}
+:root{--bg:#fbfbfc;--ink:#16181c;--dim:#5d646f;--rule:#e6e8ec}
+@media(prefers-color-scheme:dark){:root{--bg:#0c0d10;--ink:#e8eaee;--dim:#939ba7;--rule:#1e2127}}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--ink);
-  font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
-.wrap{max-width:48rem;margin:0 auto;padding:0 24px 90px}
-header{padding:84px 0 40px}
-.logo{font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:20px}
-h1{font-size:clamp(28px,5.4vw,40px);line-height:1.2;letter-spacing:-.022em;font-weight:650;max-width:20ch}
-.stand{color:var(--dim);font-size:18px;margin-top:16px;max-width:48ch}
-h2{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);font-weight:650;margin-bottom:18px}
-section{padding:40px 0;border-top:1px solid var(--rule)}
-p{margin-bottom:13px;color:var(--dim)}
-.apps{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:12px;overflow:hidden}
-.apps a{background:var(--card);padding:17px 20px;text-decoration:none;display:block;color:inherit}
-.apps a:hover{background:var(--bg)}
-.apps b{display:block;font-weight:640;font-size:16px;color:var(--ink)}
-.apps span{color:var(--dim);font-size:14.5px}
-.apps em{font-style:normal;color:var(--accent);font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:650}
-.vals{list-style:none}
-.vals li{padding:13px 0;border-bottom:1px solid var(--rule);color:var(--dim);font-size:15.5px}
-.vals li:last-child{border-bottom:0}
-.vals b{color:var(--ink);font-weight:640}
-a{color:var(--accent)}
-footer{border-top:1px solid var(--rule);padding-top:26px;color:var(--dim);font-size:13.5px}
+ font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+ min-height:100vh;display:grid;place-items:center;padding:40px 24px}
+main{max-width:30rem}
+h1{font-size:23px;font-weight:650;letter-spacing:-.02em}
+p{color:var(--dim);margin-top:14px}
+hr{border:0;border-top:1px solid var(--rule);margin:26px 0}
+a{color:var(--ink)}
+.small{font-size:13.5px}
 </style>
 </head>
 <body>
-<div class="wrap">
-
-<header>
-  <div class="logo">Oshi Lab</div>
-  <h1>Small apps that do one thing, on your device</h1>
-  <p class="stand">An independent studio building for iPhone, iPad and Mac. Different problems, different apps &mdash; held together by how they are built, not by a shared template.</p>
-</header>
-
-<section>
-  <h2>How everything here is built</h2>
-  <ul class="vals">
-    <li><b>On the device.</b> The work happens on your hardware. Most of these apps have no server at all, which is why most of them work in airplane mode.</li>
-    <li><b>No account.</b> Almost nothing here asks you to sign up. There is no profile to create and none to delete.</li>
-    <li><b>No analytics, no third-party SDKs.</b> We do not measure you, and there is no advertising network reading your behaviour except where an app says plainly that it shows ads.</li>
-    <li><b>Honest about limits.</b> Every app's page says what it cannot do, not only what it can. That section is written before the marketing one.</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Apps</h2>
-  <div class="apps">
-    <a href="/neorun/"><em>Game</em><b>Neorun 3D: Overdrive</b><span>A three-lane runner scored on how close you pass, not how far you get.</span></a>
-    <a href="/zenblocks/"><em>Game</em><b>ZenBlocks</b><span>A block puzzle with no timer, no lives and no connection required.</span></a>
-    <a href="/aurora/"><em>Utility</em><b>Aurora</b><span>An alarm clock that wakes you with a different song every morning.</span></a>
-    <a href="/orakl-site/"><em>Productivity</em><b>Orakl</b><span>Describe a decision; a swarm of simulated agents argues both sides on-device.</span></a>
-    <a href="/latchkey-site/"><em>Productivity</em><b>Latchkey</b><span>Chat with any AI model using your own API keys, or on-device with Apple Intelligence.</span></a>
-    <a href="/roamguard-site/"><em>Utility</em><b>RoamGuard</b><span>Warns you before a mobile-data overage, with home and roaming as separate pools.</span></a>
-    <a href="/trainora-site/"><em>Health</em><b>Trainora</b><span>Turns the workouts already in Apple Health into a training plan that adapts.</span></a>
-    <a href="/lexical-site/"><em>Word game</em><b>Lexical</b><span>Two daily word puzzles &mdash; one French, one English &mdash; solved by meaning.</span></a>
-  </div>
-</section>
-
-<section>
-  <h2>Contact</h2>
-  <p>One address, for everything &mdash; support, privacy requests, press, and anything else.</p>
-  <p style="color:var(--ink)"><b>contact@oshi-messenger.com</b></p>
-  <p>Each app also has its own support page, linked from its entry above, with the troubleshooting that is specific to it.</p>
-</section>
-
-<footer>
-  &copy; 2026 Oshi Lab &middot; contact@oshi-messenger.com
-</footer>
-</div>
+<main>
+  <h1>Hugo Moriceau</h1>
+  <p>Independent software developer, based in France. I build and publish my own applications.</p>
+  <hr>
+  <p class="small">This address hosts the documentation, support and privacy pages for those applications. Each one is reached from its own listing on the App Store — there is no index of them here.</p>
+  <p class="small">Contact: <a href="mailto:hugomoriceau@icloud.com">hugomoriceau@icloud.com</a></p>
+</main>
 </body>
 </html>
