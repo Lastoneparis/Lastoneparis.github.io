@@ -3,31 +3,193 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Hugo Moriceau</title>
-<meta name="description" content="Personal page of Hugo Moriceau, an independent software developer based in France.">
-<meta name="robots" content="noindex">
+<title>Oshi Lab &mdash; an independent software studio</title>
+<meta name="description" content="Oshi Lab is an independent software studio. We started with an encrypted messenger and now build across navigation, training, games and developer tools for Apple platforms.">
+<link rel="canonical" href="https://lastoneparis.github.io/">
+<meta property="og:title" content="Oshi Lab">
+<meta property="og:description" content="An independent software studio building for Apple platforms.">
+<meta property="og:type" content="website">
 <style>
-:root{--bg:#fbfbfc;--ink:#16181c;--dim:#5d646f;--rule:#e6e8ec}
-@media(prefers-color-scheme:dark){:root{--bg:#0c0d10;--ink:#e8eaee;--dim:#939ba7;--rule:#1e2127}}
+:root{
+  --paper:#fdfcfa; --ink:#14161a; --dim:#5b626d; --faint:#8b929c;
+  --rule:#e6e3dd; --card:#ffffff; --accent:#8a3324; --accent-2:#1f4f7a;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#0c0d10;--ink:#e9ebef;--dim:#98a0ab;--faint:#6d7681;--rule:#1e2127;--card:#131519;--accent:#e08060;--accent-2:#79aede}
+}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--ink);
- font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
- min-height:100vh;display:grid;place-items:center;padding:40px 24px}
-main{max-width:30rem}
-h1{font-size:23px;font-weight:650;letter-spacing:-.02em}
-p{color:var(--dim);margin-top:14px}
-hr{border:0;border-top:1px solid var(--rule);margin:26px 0}
-a{color:var(--ink)}
-.small{font-size:13.5px}
+body{background:var(--paper);color:var(--ink);
+  font:17px/1.72 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,ui-serif,serif;
+  -webkit-text-size-adjust:100%}
+.s{max-width:43rem;margin:0 auto;padding:0 24px}
+.sans{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif}
+
+/* masthead: a nameplate, not a nav bar */
+.plate{border-bottom:3px double var(--ink);padding:62px 0 20px;margin-bottom:0}
+.plate .name{font-size:clamp(30px,7vw,48px);letter-spacing:-.02em;font-weight:600;line-height:1}
+.plate .line{font-family:-apple-system,system-ui,sans-serif;font-size:11.5px;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--accent);font-weight:700;margin-top:14px}
+
+section{padding:40px 0;border-bottom:1px solid var(--rule)}
+section:last-of-type{border-bottom:0}
+h2{font-family:-apple-system,system-ui,sans-serif;font-size:11.5px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--faint);font-weight:700;margin-bottom:20px}
+h3{font-size:19px;font-weight:600;margin-bottom:4px;letter-spacing:-.008em}
+p{margin-bottom:15px;color:var(--dim)}
+p.ink{color:var(--ink)}
+p:last-child{margin-bottom:0}
+.lede{font-size:20px;line-height:1.62;color:var(--ink);margin-bottom:18px}
+
+/* selected work: deliberately uneven entries, not a uniform grid */
+.work{margin-top:-6px}
+.work article{padding:22px 0;border-top:1px solid var(--rule)}
+.work article:first-child{border-top:0;padding-top:0}
+.work .plat{font-family:-apple-system,system-ui,sans-serif;font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--faint);font-weight:700;margin-bottom:7px}
+.work p{font-size:16.5px;margin-bottom:0}
+.work a.more{font-family:-apple-system,system-ui,sans-serif;font-size:13.5px;
+  display:inline-block;margin-top:9px}
+.rest{background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:18px 20px;margin-top:26px}
+.rest p{font-size:15.5px;margin-bottom:0}
+
+/* practice: numbered prose, not a checkbox list */
+.practice{counter-reset:pr;list-style:none}
+.practice li{counter-increment:pr;position:relative;padding-left:50px;margin-bottom:26px}
+.practice li:last-child{margin-bottom:0}
+.practice li::before{content:counter(pr,decimal-leading-zero);position:absolute;left:0;top:4px;
+  font-family:-apple-system,system-ui,sans-serif;font-size:12px;font-weight:700;
+  color:var(--accent-2);letter-spacing:.06em}
+.practice b{display:block;font-weight:600;color:var(--ink);margin-bottom:3px}
+.practice span{color:var(--dim);font-size:16.5px}
+
+/* press kit: a definition table */
+.kit{font-family:-apple-system,system-ui,sans-serif;font-size:15px}
+.kit div{display:grid;grid-template-columns:11rem 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--rule)}
+.kit div:last-child{border-bottom:0}
+.kit dt,.kit .k{color:var(--faint);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding-top:3px}
+.kit .v{color:var(--dim)}
+.kit .v b{color:var(--ink);font-weight:650}
+@media(max-width:560px){.kit div{grid-template-columns:1fr;gap:3px}}
+
+a{color:var(--accent-2);text-decoration-thickness:1px;text-underline-offset:2px}
+footer{padding:30px 0 70px;color:var(--faint);
+  font-family:-apple-system,system-ui,sans-serif;font-size:13px;border-top:3px double var(--ink);margin-top:10px}
+footer a{color:var(--faint)}
 </style>
 </head>
 <body>
-<main>
-  <h1>Hugo Moriceau</h1>
-  <p>Independent software developer, based in France. I build and publish my own applications.</p>
-  <hr>
-  <p class="small">This address hosts the documentation, support and privacy pages for those applications. Each one is reached from its own listing on the App Store — there is no index of them here.</p>
-  <p class="small">Contact: <a href="mailto:hugomoriceau@icloud.com">hugomoriceau@icloud.com</a></p>
-</main>
+<div class="s">
+
+<div class="plate">
+  <div class="name">Oshi Lab</div>
+  <div class="line">Independent software studio &middot; Switzerland</div>
+</div>
+
+<section>
+  <p class="lede">Oshi Lab is an independent studio that builds software for Apple platforms. It began with an encrypted messenger, and the discipline that project required &mdash; doing the work on the device, keeping as little as possible, and being specific about what the software cannot do &mdash; is what the studio has carried into everything since.</p>
+  <p>The work is not a category. A navigation app for European drivers, an adaptive training coach, a daily word game, a screen-capture tool, a rank tracker for other developers: these are separate products with separate audiences, separate roadmaps and separate problems, and they are built that way. What they have in common is a studio, not a template.</p>
+</section>
+
+<section>
+  <h2>Selected work</h2>
+  <div class="work">
+
+    <article>
+      <div class="plat">iOS &middot; Android &middot; macOS &middot; Windows</div>
+      <h3>OSHI</h3>
+      <p>The project the studio is named after: an encrypted messenger with no account, no phone number and no address book upload. The infrastructure behind it &mdash; the transport, the relay, the mail server &mdash; is run by the studio and designed so that there is nothing useful to hand over. It is the hardest thing here and the reason the rest is built the way it is.</p>
+      <a class="more" href="https://oshi-messenger.com/">oshi-messenger.com &rarr;</a>
+    </article>
+
+    <article>
+      <div class="plat">iOS &middot; CarPlay</div>
+      <h3>WayCar</h3>
+      <p>Navigation written for European driving rather than adapted to it: national vignettes announced before the border, tolls and fuel costed into the route so the &ldquo;cheapest&rdquo; option is a number in euros, and electric-charge planning based on the consumption the car actually records rather than the manufacturer&rsquo;s figure. French first, because that is who it was written for.</p>
+      <a class="more" href="/waycar-nav/">waycar-nav &rarr;</a>
+    </article>
+
+    <article>
+      <div class="plat">iOS &middot; Apple Watch</div>
+      <h3>Trainora</h3>
+      <p>A training coach that starts from the workouts already sitting in Apple Health, whatever recorded them, and builds a week from your own volume. Every prescribed session carries the reason it was prescribed, and the model reports how confident it is, because a fortnight of history is not a season of it.</p>
+      <a class="more" href="/trainora-site/">trainora-site &rarr;</a>
+    </article>
+
+    <article>
+      <div class="plat">iOS &middot; macOS &middot; tvOS &middot; visionOS</div>
+      <h3>Orakl</h3>
+      <p>A decision simulator. You describe what you are weighing; a swarm of simulated agents seeded with deliberately opposing priors argues it out on the device, and you get the strongest case on each side plus a measure of how divided the swarm was. It runs in airplane mode, which is the only reason it is reasonable to type a real decision into it.</p>
+      <a class="more" href="/orakl-site/">orakl-site &rarr;</a>
+    </article>
+
+    <article>
+      <div class="plat">iOS</div>
+      <h3>Lexical</h3>
+      <p>Two word puzzles a day, one French and one English, solved by meaning rather than by letters: you are told how close a guess is semantically, not which characters were right. The French and English puzzles use different data because the two languages are not translations of one another.</p>
+      <a class="more" href="/lexical-site/">lexical-site &rarr;</a>
+    </article>
+
+    <article>
+      <div class="plat">iOS</div>
+      <h3>RoamGuard</h3>
+      <p>A mobile-data monitor that keeps home and roaming as two separate pools and warns before an overage rather than reporting one. It is also the clearest example of the studio&rsquo;s habit of publishing its own limits: iOS does not give an app the carrier&rsquo;s billed figure, and RoamGuard&rsquo;s site says so above the fold rather than in the small print.</p>
+      <a class="more" href="/roamguard-site/">roamguard-site &rarr;</a>
+    </article>
+
+    <article>
+      <div class="plat">iOS &middot; iPadOS &middot; macOS</div>
+      <h3>AdScope</h3>
+      <p>A tool for other independent developers: App Store keyword ranks measured across storefronts and kept as history, alongside read-only Apple Search Ads reporting. Written because the studio needed it, and useful mainly to people with the same problem.</p>
+    </article>
+
+  </div>
+
+  <div class="rest">
+    <p>The studio also publishes games &mdash; among them <a href="/neorun-site/">Neorun 3D</a>, <a href="/zenblocks-site/">ZenBlocks</a> and Vallon &mdash; and a number of smaller utilities. The complete, current list is whatever the App Store shows under the developer name; it is the only version of that list that is never out of date.</p>
+  </div>
+</section>
+
+<section>
+  <h2>How the studio works</h2>
+  <ol class="practice">
+    <li><b>One product, one owner, one problem</b><span>Each app is owned end to end rather than produced from a house template. They do not share a design system, a roadmap or a release train, and the sites you reach from here are deliberately not built alike either.</span></li>
+    <li><b>Do the work on the device where the device can do it</b><span>This is a preference, not a rule we pretend is universal. A messenger needs a relay; a ride-hailing app needs a server and an account; a land-registry tool needs a database. Where an app genuinely does not need one &mdash; a game, a puzzle, a tracker &mdash; it does not get one, and it keeps working on a plane.</span></li>
+    <li><b>Publish the limits, not only the features</b><span>Every product page here has a section on what the software cannot do and why, written before the marketing copy. Most of the time the reason is a platform boundary rather than a missing feature, and saying so is more useful than implying it will arrive later.</span></li>
+    <li><b>Ship in the user&rsquo;s language</b><span>Interface text lives in string catalogues, not in the code, and most of the apps ship in more than thirty languages. Several were written in French first and translated outward rather than the other way round.</span></li>
+    <li><b>Answer the email</b><span>There is one address for support, privacy requests and press, and it is read by the people who wrote the software.</span></li>
+  </ol>
+</section>
+
+<section>
+  <h2>Press &amp; brand</h2>
+  <div class="kit">
+    <div><span class="k">Studio name</span><span class="v"><b>Oshi Lab</b> &mdash; two words, capital O, capital L. Not &ldquo;OshiLab&rdquo;, not &ldquo;OSHI Lab&rdquo;.</span></div>
+    <div><span class="k">Product names</span><span class="v">OSHI is set in capitals; every other product is title case &mdash; WayCar, Trainora, Orakl, Lexical, RoamGuard, AdScope, Neorun 3D, ZenBlocks.</span></div>
+    <div><span class="k">Platforms</span><span class="v">iPhone, iPad, Mac, Apple Watch, Apple TV and Apple Vision Pro, depending on the product. OSHI additionally ships on Android and Windows.</span></div>
+    <div><span class="k">Review copies</span><span class="v">Promo codes and TestFlight builds are available on request for any published app. Say which app and which platform.</span></div>
+    <div><span class="k">Screenshots &amp; icons</span><span class="v">Ask and we will send the current assets for the app you are writing about, at full resolution. Please do not re-render an icon.</span></div>
+    <div><span class="k">Interviews</span><span class="v">Happy to talk about how a specific app works. Same address.</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Contact &amp; legal</h2>
+  <p class="ink"><b>contact@oshi-messenger.com</b></p>
+  <p>One address for everything: support, privacy and data requests, press, licensing and everything else. Each app also keeps its own support page &mdash; linked from its App Store listing and from its entry above &mdash; with the troubleshooting that is specific to it.</p>
+  <div class="kit" style="margin-top:22px">
+    <div><span class="k">Publisher</span><span class="v">Oshi Lab, Switzerland</span></div>
+    <div><span class="k">Contact</span><span class="v"><a href="mailto:contact@oshi-messenger.com">contact@oshi-messenger.com</a></span></div>
+    <div><span class="k">This site</span><span class="v">Static pages hosted by GitHub Pages (GitHub, Inc.). No cookies are set and no analytics are loaded.</span></div>
+    <div><span class="k">App licence</span><span class="v">Unless an app states otherwise, use is governed by the <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard End User Licence Agreement</a>.</span></div>
+    <div><span class="k">Privacy</span><span class="v">Each app publishes its own privacy policy, because each app handles different data. There is no studio-wide policy pretending they are the same.</span></div>
+  </div>
+  <!-- TODO (owner to confirm before this is treated as a full imprint): the legal form and registration number of the entity trading as Oshi Lab, its registered address, and the city to name alongside "Switzerland" in the nameplate. Nothing here has been invented; "Switzerland" is taken from the developer's own existing copyright line. -->
+</section>
+
+<footer>
+  &copy; 2026 Oshi Lab &middot; <a href="mailto:contact@oshi-messenger.com">contact@oshi-messenger.com</a>
+</footer>
+
+</div>
 </body>
 </html>
