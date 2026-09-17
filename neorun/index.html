@@ -3,99 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Neorun 3D: Overdrive — score by the margin, not the distance</title>
-<meta name="description" content="A three-lane runner through a synthwave city that pays you for how close you dare to pass. Offline, one hand, no account.">
-<style>
-:root{--void:#07030f;--grid:#1a0b2e;--cyan:#21e6c1;--mag:#ff2e88;--amber:#ffc93c;--ink:#f2eaff;--dim:#9d8fb8}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--void);color:var(--ink);font:16px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace}
-.scan{background:repeating-linear-gradient(180deg,transparent 0 3px,rgba(255,255,255,.014) 3px 4px)}
-header{padding:72px 20px 56px;text-align:center;background:
- radial-gradient(80% 60% at 50% 0%,rgba(255,46,136,.22),transparent 60%),
- linear-gradient(180deg,var(--grid),var(--void) 70%)}
-h1{font-size:clamp(30px,7vw,52px);letter-spacing:-.02em;line-height:1.05;
- background:linear-gradient(96deg,var(--cyan),var(--mag));-webkit-background-clip:text;background-clip:text;color:transparent}
-.rule{margin:20px auto 0;max-width:34rem;color:var(--dim);font-size:17px}
-main{max-width:56rem;margin:0 auto;padding:0 20px 80px}
-section{padding:52px 0;border-top:1px solid rgba(255,255,255,.07)}
-h2{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);margin-bottom:22px}
-table{width:100%;border-collapse:collapse;font-size:15px}
-th,td{padding:11px 10px;text-align:left;border-bottom:1px solid rgba(255,255,255,.07)}
-th{color:var(--dim);font-weight:500;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
-td.pts{color:var(--amber);text-align:right;white-space:nowrap}
-.keys{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
-.key{border:1px solid rgba(255,255,255,.16);border-radius:8px;padding:9px 13px;font-size:14px;color:var(--dim)}
-.key b{color:var(--ink);font-weight:600}
-dl{display:grid;gap:20px}
-dt{color:var(--mag);font-size:15px;margin-bottom:5px}
-dd{color:var(--dim);font-size:15px}
-footer{border-top:1px solid rgba(255,255,255,.07);padding:30px 20px 50px;text-align:center;color:var(--dim);font-size:13px}
-a{color:var(--cyan)}
-@media(max-width:520px){td.pts{font-size:14px}}
-</style>
+<title>Moved</title>
+<link rel="canonical" href="https://lastoneparis.github.io/neorun-site/">
+<meta http-equiv="refresh" content="0; url=https://lastoneparis.github.io/neorun-site/">
+<meta name="robots" content="noindex">
+<style>body{font:16px/1.7 -apple-system,BlinkMacSystemFont,sans-serif;max-width:32rem;margin:22vh auto;padding:0 24px;color:#333}
+@media(prefers-color-scheme:dark){body{background:#101114;color:#ddd}}a{color:#2563eb}</style>
 </head>
-<body class="scan">
-<header>
-  <h1>Score by the margin,<br>not the distance</h1>
-  <p class="rule">Neorun 3D is a three-lane runner through a synthwave city that pays you for how close you dare to pass &mdash; not for how long you survive.</p>
-</header>
-<main>
-
-<section>
-  <h2>The rule</h2>
-  <p>Running down the middle of an empty lane earns you nothing. Every point in Neorun comes from a <b>graze</b>: passing an obstacle close enough that the game registers the margin. The tighter the gap, the higher the multiplier, and the multiplier is what compounds.</p>
-</section>
-
-<section>
-  <h2>Scoring</h2>
-  <table>
-    <thead><tr><th>Pass</th><th>Margin</th><th class="pts">Multiplier</th></tr></thead>
-    <tbody>
-      <tr><td>Clear</td><td>Wide of the obstacle</td><td class="pts">&times;1</td></tr>
-      <tr><td>Close</td><td>Inside the warning band</td><td class="pts">&times;3</td></tr>
-      <tr><td>Graze</td><td>Paint-scraping</td><td class="pts">&times;6</td></tr>
-      <tr><td>Overdrive</td><td>Held across a full chain</td><td class="pts">&times;9</td></tr>
-    </tbody>
-  </table>
-  <p style="margin-top:18px;color:var(--dim);font-size:15px">A collision does not just end the run &mdash; it drops the chain. Overdrive is a state you hold, and the whole game is the tension between banking a chain and pushing it one obstacle further.</p>
-</section>
-
-<section>
-  <h2>Controls</h2>
-  <div class="keys">
-    <span class="key"><b>Swipe</b> &larr; &rarr; &nbsp;change lane</span>
-    <span class="key"><b>Swipe</b> &uarr; &nbsp;jump</span>
-    <span class="key"><b>Swipe</b> &darr; &nbsp;slide</span>
-    <span class="key"><b>Tap</b> &nbsp;pause</span>
-  </div>
-  <p style="margin-top:18px;color:var(--dim);font-size:15px">One thumb, portrait, no tilt. It is built to be played standing on a train with the other hand holding on.</p>
-</section>
-
-<section>
-  <h2>Off the grid</h2>
-  <p style="color:var(--dim)">No account, no sign-in, no network needed. Scores, prisms and unlocked skins live on your device. Ads are never shown while you are offline, and <b>Remove Ads Forever</b> retires them permanently.</p>
-</section>
-
-<section>
-  <h2>Questions</h2>
-  <dl>
-    <dt>Does it need an internet connection?</dt>
-    <dd>No. Every mode runs offline. The only thing the network is used for is serving ads in the free version.</dd>
-    <dt>What are prisms for?</dt>
-    <dd>Prisms are earned by running and spent on ship skins. They are not sold for money &mdash; there is no currency purchase in the game.</dd>
-    <dt>I bought Remove Ads and reinstalled.</dt>
-    <dd>Open Settings inside the game and choose Restore Purchases. Apple restores it to any device on the same Apple Account.</dd>
-    <dt>My score did not save.</dt>
-    <dd>Scores write at the end of a run. Force-quitting mid-run discards that run by design. If a completed run is missing, <a href="support.html">tell us</a>.</dd>
-  </dl>
-</section>
-
-</main>
-<footer>
-  <a href="support.html">Support</a> &nbsp;&middot;&nbsp;
-  <a href="privacy/">Privacy</a> &nbsp;&middot;&nbsp;
-  <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">EULA</a><br><br>
-  &copy; 2026 Oshi Lab
-</footer>
-</body>
-</html>
+<body><p>This page has moved to <a href="https://lastoneparis.github.io/neorun-site/">https://lastoneparis.github.io/neorun-site/</a>.</p></body></html>
